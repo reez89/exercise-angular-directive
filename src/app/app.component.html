@@ -34,3 +34,11 @@
 >
   This is my secret password = tuna , visualizzata : {{ counter }}
 </p>
+<!-- white-text è una classe applicata nel css -->
+<div
+  *ngFor="let item of log"
+  [ngStyle]="{ backgroundColor: item >= 5 ? 'blue' : 'transparent' }"
+  [ngClass]="{ 'white-text': item >= 5 }"
+>
+  {{ item }}
+</div>

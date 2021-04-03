@@ -15,11 +15,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   buttonDisplay: boolean = false;
   counter: number = 0;
+  log = [];
 
   onbuttonDisplay() {
     this.buttonDisplay = !this.buttonDisplay;
     if (this.buttonDisplay) {
       this.counter++;
+      this.log.push(this.counter);
     }
   }
   getColor() {
