@@ -36,7 +36,7 @@
 </p>
 <!-- white-text è una classe applicata nel css -->
 <div
-  *ngFor="let item of log"
+  *ngFor="let item of log; let i = index"
   [ngStyle]="{ backgroundColor: item >= 5 ? 'blue' : 'transparent' }"
   [ngClass]="{ 'white-text': item >= 5 }"
 >
